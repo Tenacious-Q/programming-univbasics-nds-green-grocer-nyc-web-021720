@@ -92,6 +92,23 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+
+  consolidated_cart = consolidate_cart(cart) 
+  couponed_cart = apply_coupons(consolidated_cart, coupons)
+  clearanced_cart = apply_clearance(couponed_cart)
+  final_cart = clearanced_cart # Renamed for clarity 
+
+  total = 0 
+  i = 0 
+  while i < final_cart.length 
+    total += final_cart[i][:price] * final_cart[i][:count] 
+    counter += 1 
+  end 
+
+  if total > 100 
+    total -= (total * 0.10)  # Same as: total = total * 0.90 
+  end
+  total 
 end
 
 
