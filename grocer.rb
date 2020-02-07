@@ -116,8 +116,8 @@ end
 ########################################################################
 #         SCRATCH CODE
 #
-#  Possibly come back and add comments saying 
-#  which blocks of code solve which erros? (as per the video) 
+#  Possibly come back and add comments saying
+#  which blocks of code solve which erros? (as per the video)
 
 =begin
 
